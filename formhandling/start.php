@@ -11,7 +11,8 @@ $query = "insert into `user` (`name`)values('$name')";
 $result = mysqli_query($connection, $query);
 
 if ($result) {
-    echo "Success";
+    header('location:/online-quiz/pages/quiz.php?user=' . $connection->insert_id);
+
 }
 
 
